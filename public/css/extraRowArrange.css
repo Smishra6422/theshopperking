@@ -1,0 +1,39 @@
+body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 44px auto 2rem 10.5rem;
+    grid-template-rows: 44px auto 2rem 10.5rem;
+}
+
+nav {
+    -ms-grid-row : 1;
+    grid-row: 1/2;
+}
+
+#form {
+    -ms-grid-row : 2;
+    grid-row: 2/3;
+}
+
+.offerImages {
+    -ms-grid-row : 2;
+    grid-row: 2/3;
+}
+
+
+
+.footer {
+    -ms-grid-row : 3;
+    grid-row: 4/5;
+}
+
+
+@media (max-width:60rem) {
+    body {
+        -ms-grid-rows: 44px  auto 2rem  10.5rem;
+        grid-template-rows: 44px auto 2rem 23rem;
+    }
+}
+
+
+

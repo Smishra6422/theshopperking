@@ -1,0 +1,22 @@
+<div id="search-form">
+    <button id="back-icon"><i class="fa fa-arrow-left"></i></button>
+
+    <form method="GET" action="/searchProduct">
+        
+        <input id="search-input" type="text" name="searchItem" placeholder="Search your product" required="" autocomplete="off" >
+        <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <div id="search-suggestion">
+      <ul>
+        <% suggestionLists.forEach(suggestion => { %>
+            <li class="search-suggestion-li"><a href="/searchProduct?searchItem=<%= suggestion.keyword %>" class="search-suggestion-item"><%= suggestion.keyword %></a></li>
+        <% }) %>
+        
+        
+        
+
+        
+      </ul>
+    </div>
+</div>

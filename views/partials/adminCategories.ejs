@@ -1,0 +1,23 @@
+<section class="categories">
+
+    <% categories.forEach(categoriesItem => { %>
+        <a href="/adminProduct/?product=<%= categoriesItem.categoriesName %>">
+            <div class="categoriesItem">
+                <div class="categoriesImage">
+                    <img src="<%= categoriesItem.imageUrl %>" alt="">
+                </div>
+                <div class="categoriesName">
+                    <h6 class="name"><%= categoriesItem.originalName %></h6>
+                </div>
+                <div class="categoriesDiscount">
+                    <p class="categoriesDiscountPercent"><%= categoriesItem.offPercent %></p>
+                </div>
+            </div>
+        </a>
+
+        <% }) %>
+
+    
+    
+
+</section>

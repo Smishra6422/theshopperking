@@ -1,0 +1,111 @@
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-auto-rows: 24rem;
+    margin: 1rem 3px;
+    grid-gap: 1rem;
+} 
+
+.categories > a {
+    display: inline-block;
+    position: relative
+}
+ 
+.categoriesItem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.categoriesImage {
+    position: relative;
+    width: 100%;
+    height: 73%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.categoriesImage > img{
+    width: 100%;
+    height: 100%;
+}
+
+.categoriesName > .name, .categoriesDiscount > .categoriesDiscountPercent {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.categoriesName > .name {
+    letter-spacing: .15rem;
+    color: #f36652;
+}
+
+.categoriesDiscount > .categoriesDiscountPercent {
+    color: #4caf50;
+    letter-spacing: .1rem;
+   
+}
+
+.categoriesName, .categoriesDiscount {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+   
+}
+
+@media (min-width:63rem) {
+    .categories > a:hover .categoriesName > .name  {
+        letter-spacing: 0.2rem;
+        
+    }
+    
+    .categories > a:hover .categoriesDiscount > .categoriesDiscountPercent  {
+        letter-spacing: 0.15rem;
+        color: #0facf3;
+    }
+}
+
+@media (max-width:64rem) {
+    .categories {
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+     }
+    
+}
+
+@media (max-width:52rem) {
+    .categories {
+        grid-template-columns: 1fr 1fr 1fr ;
+     }
+    
+}
+
+@media (max-width:38rem) {
+    .categories {
+        grid-template-columns: 1fr 1fr ;
+     }
+
+     .categoriesName > .name, .categoriesDiscount > .categoriesDiscountPercent {
+        font-size: 1.2rem;
+    }
+
+     .categoriesDiscount > .categoriesDiscountPercent {
+        letter-spacing: 0;
+       
+    }
+    
+}
+

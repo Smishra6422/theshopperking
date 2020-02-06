@@ -1,0 +1,14 @@
+<% if( totalItems > 0) { %>
+    <div id="pagination" >
+        <% if(hasPreviousPage === true) { %>
+            <a href="/<%= URI %>?itemSearch=<%= itemSearch %>&page=<%= prevPage %>">Prev</a>
+        <% } %>
+      
+        <a href="/<%= URI %>?itemSearch=<%= itemSearch %>&page=<%= currentPage %>" class="active"><%= currentPage %></a>
+        <% if(hasNextPage === true) { %>
+            <a href="/<%= URI %>?itemSearch=<%= itemSearch %>&page=<%= nextPage %>" >Next</a>
+        <% } %>
+        
+    </div>
+<% } %>
+

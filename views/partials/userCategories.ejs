@@ -1,0 +1,22 @@
+<section class="categories">
+
+    <% categories.forEach(categories => { %>
+        <a href="/getProduct/?product=<%= categories.categoriesName %>">
+            <div class="categoriesItem">
+                <div class="categoriesImage">
+                    <img src="<%= categories.imageUrl %>" alt="">
+                </div>
+                <div class="categoriesName">
+                    <h6 class="name"><%= categories.originalName %></h6>
+                </div>
+                <div class="categoriesDiscount">
+                    <p class="categoriesDiscountPercent"><%= categories.offPercent %></p>
+                </div>
+            </div>
+        </a>
+  <% }) %>
+
+   
+    
+
+</section>

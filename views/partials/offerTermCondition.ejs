@@ -1,0 +1,17 @@
+<div class="termCondition">
+    <h2 id="Heading"><strong>Terms and Conditions</strong></h2>
+
+    <p id="websiteName" class="termConditionContent">Welcome to theshopperking!</p>
+
+    <p class="termConditionContent">Winner of the contest will be announce by the end of month!</p>
+
+    <p class="termConditionContent">To get eligible you must:</p>
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <li><%= offerCondition.offerTermCondition %></li>
+
+        <% }) %>
+        
+    </ul>   
+</div>

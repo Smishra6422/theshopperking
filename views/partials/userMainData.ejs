@@ -1,0 +1,39 @@
+<% if(totalItems > 0) { %>
+    <div id="main">
+        <div class="grid">
+             
+    
+            <% products.forEach(product => { %>
+                <div class="gridItems">
+                    <div class="itemImage">
+                        <img src="<%= product.imageUrl %>" alt="">
+                    </div>
+                    <div class="itemName">
+                        <h5 class="name"><%= product.originalName %></h5>
+                    </div>
+                    <div class="itemDescription">
+                        <p class="description"><%= product.description %></p>
+                    </div>
+                    <div class="itemPrice">
+                        <h6 class="currentPrice">Rs. <%= product.currentPrice %></h6>
+                        <h6 class="originalPrice">Rs. <%= product.originalPrice %></h6>
+                        <h6 class="discountPercent"><%= product.offPercent %></h6>
+                    </div>
+                    <div class="itemBuy">
+                        <a href="<%= product.productUrl %>">
+                            BUY NOW
+                        </a>
+                    </div>
+                </div>
+           <% })  %>
+             
+           
+    
+            
+                
+           
+            
+        </div>
+    </div>
+<% } %>
+

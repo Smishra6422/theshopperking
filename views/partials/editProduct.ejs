@@ -1,0 +1,99 @@
+<div id="form">
+    <form action="/editProduct" method="POST">
+     <div>
+       <label>Product Url :</label>   
+       <input type="text" name="productUrl" value="<%= product.productUrl %>"  placeholder="Product Link" required autocomplete="off">
+     </div>
+
+     <div>
+       <label>Categories Domain :</label>   
+       <input type="text" name="categoriesDomain" value="<%= product.categoriesDomain %>"  placeholder="Like Men Women Kids" required>
+     </div>
+
+     <div>
+       <label>Product Domain :</label>   
+       <input type="text" name="productDomain" value="<%= product.productDomain %>"  placeholder="Like Topwear Bottomwear" required>
+     </div>
+
+     <div>
+       <label>Trending :</label>   
+       <input type="text" name="trending" value="<%= product.trending %>"  placeholder="Yes or No" required>
+     </div>
+
+    <div>
+       <label>Image Url :</label>   
+       <input type="text" name="imageUrl" value="<%= product.imageUrl %>"  placeholder="Enter Image URL" required autocomplete="off">
+   </div>
+
+   <div>
+     <label>Product Type :</label>   
+     <input type="text" name="productType" value="<%= product.productType %>"  placeholder="Like Formal Casual etc." >
+   </div>
+
+    <div>
+       <label>Categories Name :</label>   
+       <input type="text" name="categoriesName" value="<%= product.categoriesName %>"  placeholder="Enter Product Name" required>
+   </div>
+
+   <div>
+     <label>Original Name :</label>   
+     <input type="text" name="originalName" value="<%= product.originalName %>"  placeholder="Enter Original Name" required autocomplete="off">
+ </div>
+
+    <div>
+       <label>Description :</label>    
+       <input type="text" name="description" value="<%= product.description %>"  placeholder="Enter Description" required autocomplete="off">
+   </div>
+
+    <div>
+       <label>Current Price :</label>   
+       <input type="text" name="currentPrice" value="<%= product.currentPrice %>"  placeholder="Enter Current Price" required autocomplete="off">
+   </div>
+
+    <div>
+       <label>Original Price :</label>   
+       <input type="text" name="originalPrice" value="<%= product.originalPrice %>"  placeholder="Enter Original Price" required autocomplete="off">
+   </div>
+
+    <div>
+       <label>Off Percent :</label>   
+       <input type="text" name="offPercent" value="<%= product.offPercent %>"  placeholder="Enter Off Percent" required>
+   </div>
+
+    <div>
+       <label>Brand Name :</label>   
+       <input type="text" name="brandName" value="<%= product.brandName %>"  placeholder="Enter Brand Name" required autocomplete="off">
+   </div>
+
+    <div>
+       <label>First Keyword :</label>   
+       <input type="text" name="searchKeywordFirst" value="<%= product.searchKeywordFirst %>"  placeholder="Enter First Keyword" required autocomplete="off">
+   </div>
+
+    <div>
+       <label>Second Keyword :</label>   
+       <input type="text" name="searchKeywordSecond" value="<%= product.searchKeywordSecond %>" placeholder="Enter Second Keyword" required autocomplete="off">
+   </div>
+
+    <div>
+       <label>Third Keyword :</label>   
+       <input type="text" name="searchKeywordThird" value="<%= product.searchKeywordThird %>"  placeholder="Enter Third Keyword" autocomplete="off">
+   </div>
+
+    <div>
+       <label>Fourth Keyword :</label>   
+       <input type="text" name="searchKeywordFour" value="<%= product.searchKeywordFour %>"  placeholder="Enter Fourth Keyword" autocomplete="off">
+   </div>
+
+   <input type="hidden" name="productId" value="<%= product._id %>">
+
+
+
+
+   <div class="submitButton">
+       <input id="submit" type="submit" name="" value="Edit Product">
+   </div>
+
+   </form>
+
+</div>

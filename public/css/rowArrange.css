@@ -1,0 +1,47 @@
+body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 44px  auto auto  10.5rem;
+    grid-template-rows: 44px auto auto 10.5rem;
+}
+
+nav {
+    -ms-grid-row : 1;
+    grid-row: 1/2;
+}
+
+#main {
+    -ms-grid-row : 2;
+    grid-row: 2/3;
+}
+
+.categories {
+    -ms-grid-row : 2;
+    grid-row: 2/3;
+}
+
+.noProductFound {
+    -ms-grid-row : 2;
+    grid-row: 2/3;
+}
+
+#pagination {
+    -ms-grid-row : 3;
+    grid-row: 3/4;
+}
+
+.footer {
+    -ms-grid-row : 4;
+    grid-row: 4/5;
+}
+
+
+@media (max-width:60rem) {
+    body {
+        -ms-grid-rows: 44px  auto auto  10.5rem;
+        grid-template-rows: 44px auto auto 23rem;
+    }
+}
+
+
+
