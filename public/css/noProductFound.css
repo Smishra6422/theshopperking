@@ -2,6 +2,18 @@
     position: relative;
 }
 
+.noProductTitle {
+  text-align: center;
+  margin: 0;
+  font-size: 1.3rem;
+  color: #0facf3;
+}
+
+.noProductTitle:nth-child(1) {
+  margin-top: 0.5rem;
+  
+}
+
 #noProductLists {
     display: -webkit-box;
   	display: -moz-box;

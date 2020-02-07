@@ -475,6 +475,10 @@ nav{
     right: 1rem;
 }
 
+#toggle-menu {
+	height: 100%;
+}
+
 
 
  #toggle ul{

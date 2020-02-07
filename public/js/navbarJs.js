@@ -11,7 +11,7 @@
     	window.addEventListener('mouseup', function(event) {
     			
     			
-    		 		if(event.target != toggle && event.target.parentNode != toggleMenu && event.target != shopName) {
+    		 		if( event.target != toggleMenu ) {
     		 		toggle.style.display = 'none';
     		 		leftMenuBar.style.display = 'block'
     		 		
@@ -36,7 +36,7 @@
 				SuggestionList = suggestionItems.firstElementChild.textContent
 				if(SuggestionList.toLowerCase().includes(searchInputValue) ) {
 					suggestionItems.style.display = 'block'
-					// console.log(SuggestionList)
+					
 				} else {
 					suggestionItems.style.display = 'none'
 				}
