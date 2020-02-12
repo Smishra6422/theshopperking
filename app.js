@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
@@ -87,7 +88,7 @@ app.use(passport.session());
 
 // mongodb
 
-const MONGODB_URI = 'mongodb+srv://taskapp:MishrA6422@cluster0-fivla.mongodb.net/theShopperKing'
+const MONGODB_URI = process.env.MONGODB_URI
 mongoose.connect(MONGODB_URI, { useUnifiedTopology:true, useNewUrlParser:true })
 .then(() =>{
 
