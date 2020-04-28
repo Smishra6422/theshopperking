@@ -1,7 +1,7 @@
 .categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    grid-auto-rows: 24rem;
+    grid-auto-rows: 21rem;
     margin: 1rem 3px;
     grid-gap: 1rem;
 } 
@@ -10,6 +10,8 @@
     display: inline-block;
     position: relative
 }
+
+
  
 .categoriesItem {
     position: absolute;
@@ -32,6 +34,8 @@
     height: 100%;
 }
 
+
+
 .categoriesName > .name, .categoriesDiscount > .categoriesDiscountPercent {
     font-size: 1.5rem;
     margin: 0;
@@ -40,6 +44,10 @@
 .categoriesName > .name {
     letter-spacing: .15rem;
     color: #f36652;
+    height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .categoriesDiscount > .categoriesDiscountPercent {
@@ -67,7 +75,14 @@
    
 }
 
+@media (max-width:60rem ) {
+    .categories { 
+        grid-auto-rows: 17.5rem;
+    }
+}
+
 @media (min-width:63rem) {
+    
     .categories > a:hover .categoriesName > .name  {
         letter-spacing: 0.2rem;
         
@@ -90,6 +105,8 @@
     .categories {
         grid-template-columns: 1fr 1fr 1fr ;
      }
+
+     
     
 }
 

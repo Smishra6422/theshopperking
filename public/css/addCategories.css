@@ -34,7 +34,7 @@
     margin-right: 2%;
 }
 
-#form > form > div input{
+#form > form > div input, #productOption{
     display: inline-block;
     height: 2rem;
     width: 60%;

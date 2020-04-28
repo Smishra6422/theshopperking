@@ -22,9 +22,18 @@ $(document).ready(function() {
         })
 
    $('.menu-bar').click(function() {
-       $('#toggle').show();
-       $('.left-menu').hide();
+       $('#toggle').lightbox_me({
+        overlaySpeed : 0070
+       });
    });
+
+   $('#toggle-menu-button').click(function() {
+        $('#toggle').trigger('close');
+   })
+
+   $('#toggle-close').click(function() {
+       $('#toggle').trigger('close');
+   })
 
 
 

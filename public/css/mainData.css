@@ -38,6 +38,15 @@
     height: 100%;
 }
 
+.itemImageSlide {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.itemImageSlide img {
+    width: 100% !important;
+    height: 100% !important;
+}
 
 .itemName, .itemDescription, .itemPrice, .itemBuy {
     position: absolute;
@@ -123,21 +132,15 @@
  }
 
 
-
-
-
-
 @media (min-width:73rem) {
     .grid {
-        grid-auto-rows: 24rem;
+        grid-auto-rows: 25rem;
     }
 }
 
  @media  (max-width:73rem) {
     .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
- 
-    
     }
     
 }
@@ -146,16 +149,12 @@
  @media  (max-width:57rem) {
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
- 
-    
     }
 }
 
  @media (max-width:640px)  {
     .grid {
         grid-template-columns: 1fr 1fr;
- 
-    
     }
 
     .gridItems > .itemDescription {

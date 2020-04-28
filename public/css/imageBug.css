@@ -1,0 +1,392 @@
+.mobiles {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.laptops {
+    width: 80% !important;
+    height: 55% !important;
+}
+
+.electronic-accessories {
+    width: 75% !important;
+    height: 75% !important;
+}
+
+.mi {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.oppo {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.vivo {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.apple {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.honor {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.asus {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.oneplus {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.samsung {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.nokia {
+    width: 35% !important;
+    height: 80% !important;
+}
+
+.hp {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.dell {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.lenovolaptop {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.asuslaptop {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.acer {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.macbook {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.pendrives {
+    width: 50% !important;
+    height: 55% !important;
+}
+
+.externalharddisks {
+    width: 55% !important;
+    height: 85% !important;
+}
+
+.mouse {
+    width: 45% !important;
+    height: 85% !important;
+}
+
+.keyboard {
+    width: 80% !important;
+    height: 35% !important;
+}
+
+.laptopskin {
+    width: 80% !important;
+    height: 65% !important;
+}
+
+.earphones {
+    width: 80% !important;
+    height: 70% !important;
+}
+
+.headphones {
+    width: 70% !important;
+    height: 75% !important;
+}
+
+.bluetoothearphones {
+    width: 70% !important;
+    height: 70% !important;
+}
+
+.mobilecovers {
+    width: 50% !important;
+    height: 80% !important;
+}
+
+.datacables {
+    width: 60% !important;
+    height: 85% !important;
+}
+
+.mobilecharger {
+    width: 65% !important;
+    height: 75% !important;
+}
+
+.powerbank {
+    width: 50% !important;
+    height: 80% !important;
+}
+
+.bluetoothspeakers {
+    width: 60% !important;
+    height: 85% !important;
+}
+
+.smartbands {
+    width: 55% !important;
+    height: 80% !important;
+}
+
+.babycare {
+    width: 85% !important;
+    height: 55% !important;
+}
+
+.accessories {
+    width: 85% !important;
+    height: 80% !important;
+}
+
+.diapers {
+    width: 85% !important;
+    height: 55% !important;
+}
+
+.hairoil {
+    width: 45% !important;
+    height: 85% !important;
+}
+
+.bags {
+    width: 75% !important;
+    height: 85% !important;
+}
+
+.watches {
+    width: 50% !important;
+    height: 85% !important;
+}
+
+.toys {
+    width: 85% !important;
+    height: 70% !important;
+}
+
+
+@media (max-width:60rem) {
+    .mobiles {
+        width: 40% !important;
+        height: 70% !important;
+    }
+    
+    .laptops {
+        width: 90% !important;
+        height: 50% !important;
+    }
+    
+    .electronic-accessories {
+        width: 70% !important;
+        height: 75% !important;
+    }
+    
+    .mi {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .oppo {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .vivo {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .apple {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .honor {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .asus {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .oneplus {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .samsung {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .nokia {
+        width: 40% !important;
+        height: 75% !important;
+    }
+    
+    .hp {
+        width: 75% !important;
+        height: 55% !important;
+    }
+    
+    .dell {
+        width: 75% !important;
+        height: 55% !important;
+    }
+    
+    .lenovolaptop {
+        width: 75% !important;
+        height: 55% !important;
+    }
+    
+    .asuslaptop {
+        width: 75% !important;
+        height: 55% !important;
+    }
+    
+    .acer {
+        width: 75% !important;
+        height: 55% !important;
+    }
+    
+    .macbook {
+        width: 75% !important;
+        height: 45% !important;
+    }
+    
+    .pendrives {
+        width: 50% !important;
+        height: 55% !important;
+    }
+    
+    .externalharddisks {
+        width: 55% !important;
+        height: 85% !important;
+    }
+    
+    .mouse {
+        width: 45% !important;
+        height: 85% !important;
+    }
+    
+    .keyboard {
+        width: 80% !important;
+        height: 35% !important;
+    }
+    
+    .laptopskin {
+        width: 80% !important;
+        height: 65% !important;
+    }
+    
+    .earphones {
+        width: 80% !important;
+        height: 70% !important;
+    }
+    
+    .headphones {
+        width: 70% !important;
+        height: 75% !important;
+    }
+    
+    .bluetoothearphones {
+        width: 70% !important;
+        height: 70% !important;
+    }
+    
+    .mobilecovers {
+        width: 50% !important;
+        height: 80% !important;
+    }
+    
+    .datacables {
+        width: 60% !important;
+        height: 85% !important;
+    }
+    
+    .mobilecharger {
+        width: 65% !important;
+        height: 75% !important;
+    }
+    
+    .powerbank {
+        width: 50% !important;
+        height: 80% !important;
+    }
+    
+    .bluetoothspeakers {
+        width: 60% !important;
+        height: 85% !important;
+    }
+    
+    .smartbands {
+        width: 55% !important;
+        height: 80% !important;
+    }
+    
+    .babycare {
+        width: 85% !important;
+        height: 55% !important;
+    }
+    
+    .accessories {
+        width: 85% !important;
+        height: 80% !important;
+    }
+    
+    .diapers {
+        width: 85% !important;
+        height: 55% !important;
+    }
+    
+    .hairoil {
+        width: 45% !important;
+        height: 85% !important;
+    }
+    
+    .bags {
+        width: 75% !important;
+        height: 85% !important;
+    }
+    
+    .watches {
+        width: 50% !important;
+        height: 85% !important;
+    }
+    
+    .toys {
+        width: 85% !important;
+        height: 70% !important;
+    }
+}

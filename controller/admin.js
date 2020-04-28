@@ -20,12 +20,12 @@ const deleteOfferImage = (fileName) => {
 
 exports.addProduct = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
     
     res.render('addProduct',{
         suggestionLists,
         isAdmin : req.session.isAdmin,
-        totalItems,
+        totalItemCount,
         title : 'Add Product'
     })
 }
@@ -36,7 +36,9 @@ exports.postAddProduct = (req, res, next) => {
             categoriesDomain, 
             productDomain, 
             trending, 
-            imageUrl, 
+            imageUrl,
+            imageUrl2,
+            imageUrl3, 
             productType,
             categoriesName,
             originalName, 
@@ -48,7 +50,8 @@ exports.postAddProduct = (req, res, next) => {
             searchKeywordFirst, 
             searchKeywordSecond, 
             searchKeywordThird, 
-            searchKeywordFour 
+            searchKeywordFour,
+            fixProductImage 
         } = req.body
 
     const product = new Product({
@@ -69,6 +72,14 @@ exports.postAddProduct = (req, res, next) => {
                         allowedAttributes: {}
                         }),
         imageUrl : sanitizeHTML(imageUrl, {
+                        allowedTags: [],
+                        allowedAttributes: {}
+                        }),
+        imageUrl2 : sanitizeHTML(imageUrl2, {
+                        allowedTags: [],
+                        allowedAttributes: {}
+                        }),
+        imageUrl3 : sanitizeHTML(imageUrl3, {
                         allowedTags: [],
                         allowedAttributes: {}
                         }),
@@ -119,7 +130,12 @@ exports.postAddProduct = (req, res, next) => {
         searchKeywordFour : sanitizeHTML(searchKeywordFour, {
                             allowedTags: [],
                             allowedAttributes: {}
+                            }),
+        fixProductImage : sanitizeHTML(fixProductImage, {
+                            allowedTags: [],
+                            allowedAttributes: {}
                             })
+        
     })
 
     product.save()
@@ -132,18 +148,18 @@ exports.postAddProduct = (req, res, next) => {
 
 exports.addCategories = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
 
     res.render('addCategories',{
         suggestionLists,
         isAdmin : req.session.isAdmin,
-        totalItems,
+        totalItemCount,
         title : 'Add Categories'
     })
 }
 
 exports.postAddCategories = (req, res, next) => {
-    const { categoriesDomain, imageUrl, categoriesName, offPercent, originalName } = req.body
+    const { categoriesDomain, imageUrl, categoriesName, offPercent, originalName, fixProductImage } = req.body
 
     const categories = new Categories({
         categoriesDomain : sanitizeHTML(categoriesDomain, {
@@ -163,6 +179,10 @@ exports.postAddCategories = (req, res, next) => {
                         allowedAttributes: {}
                         }),
         originalName : sanitizeHTML(originalName, {
+                        allowedTags: [],
+                        allowedAttributes: {}
+                        }),
+        fixProductImage : sanitizeHTML(fixProductImage, {
                         allowedTags: [],
                         allowedAttributes: {}
                         })
@@ -202,6 +222,7 @@ exports.getAdminCategories = async (req, res, next) => {
                 itemSearch : itemSearch,
                 isAdmin : req.session.isAdmin,
                 totalItems : totalItems,
+                totalItemCount : ( totalItems - ((page - 1) * ITEMS_PER_PAGE) ),
                 suggestionLists : suggestionLists,
                 title : 'Admin Categories'
             })
@@ -235,6 +256,7 @@ exports.getAdminProduct = async (req, res, next) => {
                 itemSearch : itemSearch,
                 isAdmin : req.session.isAdmin,
                 totalItems : totalItems,
+                totalItemCount : ( totalItems - ((page - 1) * ITEMS_PER_PAGE) ),
                 suggestionLists : suggestionLists,
                 title : 'Admin Product'
             })
@@ -244,7 +266,7 @@ exports.getAdminProduct = async (req, res, next) => {
 
 exports.editProduct = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
     
     Product.findById( req.query.productId )
            .then(product => {
@@ -253,7 +275,7 @@ exports.editProduct = async (req, res, next) => {
                    product : product,
                    suggestionLists,
                    isAdmin : req.session.isAdmin,
-                   totalItems,
+                   totalItemCount,
                    title : 'Edit Product'
                })
            })
@@ -267,6 +289,8 @@ exports.postEditProduct = (req, res, next) => {
         productDomain, 
         trending, 
         imageUrl,
+        imageUrl2,
+        imageUrl3,
         productType, 
         categoriesName,
         originalName, 
@@ -278,7 +302,8 @@ exports.postEditProduct = (req, res, next) => {
         searchKeywordFirst, 
         searchKeywordSecond, 
         searchKeywordThird, 
-        searchKeywordFour, 
+        searchKeywordFour,
+        fixProductImage, 
         productId
     } = req.body
 
@@ -301,6 +326,15 @@ exports.postEditProduct = (req, res, next) => {
                                         allowedAttributes: {}
                                         }),
                product.imageUrl = sanitizeHTML(imageUrl, {
+                                        allowedTags: [],
+                                        allowedAttributes: {}
+                                        })
+                                        ,
+               product.imageUrl2 = sanitizeHTML(imageUrl2, {
+                                        allowedTags: [],
+                                        allowedAttributes: {}
+                                        }),
+                product.imageUrl3 = sanitizeHTML(imageUrl3, {
                                         allowedTags: [],
                                         allowedAttributes: {}
                                         }),
@@ -351,6 +385,10 @@ exports.postEditProduct = (req, res, next) => {
                product.searchKeywordFour = sanitizeHTML(searchKeywordFour, {
                                         allowedTags: [],
                                         allowedAttributes: {}
+                                        }),
+               product.fixProductImage = sanitizeHTML(fixProductImage, {
+                                        allowedTags: [],
+                                        allowedAttributes: {}
                                         })
             
                return product.save()
@@ -374,12 +412,12 @@ exports.postDeleteProduct = (req, res, next) => {
 
 exports.addOfferImages = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
     
     res.render('addOfferImages',{
         suggestionLists,
         isAdmin : req.session.isAdmin,
-        totalItems,
+        totalItemCount,
         title : 'Add Offer Image'
     })
 }
@@ -402,7 +440,7 @@ exports.postAddOfferImages = async (req, res, next) => {
 
 exports.getOfferImages = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
    
     
     const images = await Image.find()
@@ -410,21 +448,21 @@ exports.getOfferImages = async (req, res, next) => {
         images,
         suggestionLists,
         isAdmin : req.session.isAdmin,
-        totalItems,
+        totalItemCount,
         title : 'Offer Images'
     })
 }
 
 exports.editOfferImage = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
     
     const productId = req.query.productId
     res.render('editOfferImage', {
             productId,
             suggestionLists,
             isAdmin : req.session.isAdmin,
-            totalItems,
+            totalItemCount,
             title : 'Edit Offer Image'
         
     })
@@ -472,20 +510,13 @@ exports.postAddKeyword = async (req, res, next) => {
 }
 
 
-
-
-
-
-
-
-
 exports.adminLogin = async (req, res, next) => {
     const suggestionLists = await Keyword.find()
-    const totalItems = []
+    const totalItemCount = []
     res.render('adminLogin',{
         suggestionLists,
         isAdmin : req.session.isAdmin,
-        totalItems,
+        totalItemCount,
         title : 'Admin Login'
     })
 }

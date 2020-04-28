@@ -4,7 +4,7 @@
         <a href="/getProduct/?product=<%= categories.categoriesName %>">
             <div class="categoriesItem">
                 <div class="categoriesImage">
-                    <img src="<%= categories.imageUrl %>" alt="">
+                    <img class="<%= categories.fixProductImage %>" src="<%= categories.imageUrl %>" alt="<%= categories.originalName %>">
                 </div>
                 <div class="categoriesName">
                     <h6 class="name"><%= categories.originalName %></h6>

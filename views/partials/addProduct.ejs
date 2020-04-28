@@ -26,6 +26,16 @@
     </div>
 
     <div>
+      <label>Image Url 2 :</label>   
+      <input type="text" name="imageUrl2"  placeholder="Enter Image URL"  autocomplete="off" >
+    </div>
+
+    <div>
+      <label>Image Url 3 :</label>   
+      <input type="text" name="imageUrl3"  placeholder="Enter Image URL"  autocomplete="off" >
+    </div>
+
+    <div>
       <label>Product Type :</label>   
       <input type="text" name="productType"  placeholder="Like Formal Sports Casual etc." >
     </div>
@@ -83,6 +93,16 @@
      <div>
         <label>Fourth Keyword :</label>   
         <input type="text" name="searchKeywordFour"  placeholder="Enter Fourth Keyword" autocomplete="off" >
+    </div>
+
+    <div>
+      <label>Product Option :</label>   
+      <select id="productOption" name="fixProductImage">
+        <option value="">None</option>
+
+        <%- include('./productOptions.ejs') %>
+
+      </select>
     </div>
 
 

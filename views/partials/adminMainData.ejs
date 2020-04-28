@@ -5,7 +5,19 @@
         <% products.forEach(product => { %>
             <div class="gridItems">
                 <div class="itemImage">
-                    <img src="<%= product.imageUrl %>" alt="">
+                    <div class="itemImageSlide cycle-slideshow"
+                            data-cycle-fx="scrollHorz"
+                            data-cycle-pause-on-hover="true"
+                            data-cycle-timeout="1000"
+                            >
+                                <img class="<%= product.fixProductImage %>" src="<%= product.imageUrl %>" alt="">
+                                <% if(product.imageUrl2) { %>
+                                    <img class="<%= product.fixProductImage %>" src="<%= product.imageUrl2 %>" alt="">
+                                <% } %>
+                                <% if(product.imageUrl3) { %>
+                                    <img class="<%= product.fixProductImage %>" src="<%= product.imageUrl3 %>" alt="">
+                                <% } %>
+                        </div>
                 </div>
                 <div class="itemName">
                     <h5 class="name"><%= product.originalName %></h5>

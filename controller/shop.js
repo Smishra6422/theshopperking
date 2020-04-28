@@ -32,6 +32,7 @@ exports.indexPage = async (req, res, next) => {
                 itemSearch : itemSearch,
                 isAdmin : req.session.isAdmin,
                 totalItems : totalItems,
+                totalItemCount : ( totalItems - ((page - 1) * ITEMS_PER_PAGE) ),
                 suggestionLists : suggestionLists,
                 offerImage : offerImage,
                 title : 'Home Page'
@@ -65,6 +66,7 @@ exports.getCategoriesPage = async (req, res, next) => {
             itemSearch : itemSearch,
             isAdmin : req.session.isAdmin,
             totalItems : totalItems,
+            totalItemCount : ( totalItems - ((page - 1) * ITEMS_PER_PAGE) ),
             suggestionLists : suggestionLists,
             title : 'Categories'
         })
@@ -96,6 +98,7 @@ exports.getUserProductList =  async (req, res, next) => {
             itemSearch : itemSearch,
             isAdmin : req.session.isAdmin,
             totalItems : totalItems,
+            totalItemCount : ( totalItems - ((page - 1) * ITEMS_PER_PAGE) ),
             suggestionLists : suggestionLists,
             title : 'Products'
         })
@@ -169,6 +172,7 @@ exports.searchProductList =  async (req, res, next) => {
             itemSearch : itemSearch,
             isAdmin : req.session.isAdmin,
             totalItems : totalItems,
+            totalItemCount : ( totalItems - ((page - 1) * ITEMS_PER_PAGE) ),
             suggestionLists : suggestionLists,
             title : 'Search Result'
         })
@@ -181,14 +185,14 @@ exports.noPage = async (req, res, next) => {
 
     
 
-    const totalItems = []
+    const totalItemCount = []
 
     const totalProducts = []
     
     res.render('404page', {
                 products : totalProducts,
                 isAdmin : req.session.isAdmin,
-                totalItems : totalItems,
+                totalItemCount : totalItemCount,
                 suggestionLists : suggestionLists,
                 title : '404 Page'
                 
@@ -199,11 +203,11 @@ exports.noPage = async (req, res, next) => {
 exports.offerTermCondition = async (req,res,next) => {
     const suggestionLists = await Keyword.find()
     const offer = await Offer.find()
-    const totalItems = []
+    const totalItemCount = []
 
     res.render('offerTermCondition', {
         suggestionLists,
-        totalItems,
+        totalItemCount,
         offer,
         isAdmin : req.session.isAdmin,
         title : 'Offer Term Condition'
@@ -213,11 +217,11 @@ exports.offerTermCondition = async (req,res,next) => {
 exports.termCondition = async (req,res,next) => {
     const suggestionLists = await Keyword.find()
 
-    const totalItems = []
+    const totalItemCount = []
 
     res.render('termCondition', {
         suggestionLists,
-        totalItems,
+        totalItemCount,
         isAdmin : req.session.isAdmin,
         title : 'Term Condition'
     })

@@ -23,7 +23,19 @@
     <div>
       <label>Original Name :</label>   
       <input type="text" name="originalName"  placeholder="Enter Original Name" required>
-  </div>
+    </div>
+<!-- changing -->
+    <div>
+      <label>Product Option :</label>   
+      <select id="productOption" name="fixProductImage">
+        <option value="">None</option>
+        
+        <%- include('./productOptions.ejs') %>
+
+      </select>
+    </div>
+
+    <!-- changing -->
 
     <div class="submitButton">
         <input id="submit" type="submit" value="Add Categories">

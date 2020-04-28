@@ -15,7 +15,6 @@ const app = express()
 const Maintenance = require('./model/underMaintenance')
 
 
-
 //passport config
 require('./config/passport')(passport)
 

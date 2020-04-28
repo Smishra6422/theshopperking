@@ -36,6 +36,11 @@ const categoriesSchema = new Schema({
         required: true,
         trim: true
 
+    },
+    fixProductImage : {
+        type: String,
+        trim: true
+
     }
     
 })

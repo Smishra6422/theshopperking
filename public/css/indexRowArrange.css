@@ -10,7 +10,7 @@ nav {
     grid-row: 1/2;
 }
 
-#imageSlider {
+.crousell {
     -ms-grid-row : 3;
     grid-row: 3/4;
 }

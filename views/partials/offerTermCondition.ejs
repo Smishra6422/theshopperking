@@ -9,9 +9,90 @@
     <ul class="termConditionUl">
         <% offer.forEach(offerCondition => { %>
 
-            <li><%= offerCondition.offerTermCondition %></li>
+            <% if(offerCondition.website == 'tsk') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
 
         <% }) %>
         
     </ul>   
+
+    <h2 id="Heading"><strong>Amazon Offer</strong></h2>
+
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <% if(offerCondition.website == 'amazon') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
+
+        <% }) %>
+        
+    </ul>
+
+    <h2 id="Heading"><strong>Flipkart Offer</strong></h2>
+
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <% if(offerCondition.website == 'flipkart') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
+
+        <% }) %>
+        
+    </ul>
+
+    <h2 id="Heading"><strong>Myntra Offer</strong></h2>
+
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <% if(offerCondition.website == 'myntra') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
+
+        <% }) %>
+        
+    </ul>
+
+    <h2 id="Heading"><strong>Zivame Offer</strong></h2>
+
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <% if(offerCondition.website == 'zivame') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
+
+        <% }) %>
+        
+    </ul>
+
+    <h2 id="Heading"><strong>Nykaa Offer</strong></h2>
+
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <% if(offerCondition.website == 'nykaa') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
+
+        <% }) %>
+        
+    </ul>
+
+    <h2 id="Heading"><strong>NNNOW Offer</strong></h2>
+
+    <ul class="termConditionUl">
+        <% offer.forEach(offerCondition => { %>
+
+            <% if(offerCondition.website == 'nnnow') { %>
+                <li><%= offerCondition.offerTermCondition %></li>
+            <% } %>
+
+        <% }) %>
+        
+    </ul>
+    
 </div>

@@ -23,7 +23,17 @@
     <div>
        <label>Image Url :</label>   
        <input type="text" name="imageUrl" value="<%= product.imageUrl %>"  placeholder="Enter Image URL" required autocomplete="off">
-   </div>
+    </div>
+
+    <div>
+      <label>Image Url 2:</label>   
+      <input type="text" name="imageUrl2" value="<%= product.imageUrl2 %>"  placeholder="Enter Image URL"  autocomplete="off">
+    </div>
+
+    <div>
+      <label>Image Url 3:</label>   
+      <input type="text" name="imageUrl3" value="<%= product.imageUrl3 %>"  placeholder="Enter Image URL"  autocomplete="off">
+    </div>
 
    <div>
      <label>Product Type :</label>   
@@ -84,6 +94,16 @@
        <label>Fourth Keyword :</label>   
        <input type="text" name="searchKeywordFour" value="<%= product.searchKeywordFour %>"  placeholder="Enter Fourth Keyword" autocomplete="off">
    </div>
+
+   <div>
+    <label>Product Option :</label>   
+    <select id="productOption" name="fixProductImage">
+      <option value="<%= product.fixProductImage %>"><%= product.fixProductImage %></option>
+
+      <%- include('./productOptions.ejs') %>
+
+    </select>
+  </div>
 
    <input type="hidden" name="productId" value="<%= product._id %>">
 

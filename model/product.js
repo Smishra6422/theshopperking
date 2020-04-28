@@ -32,6 +32,18 @@ const productSchema = new Schema({
         lowercase: true
 
     },
+    imageUrl2 : {
+        type: String,
+        trim: true,
+        lowercase: true
+
+    },
+    imageUrl3 : {
+        type: String,
+        trim: true,
+        lowercase: true
+
+    },
     productType : {
         type: String,
         trim: true,
@@ -110,6 +122,11 @@ const productSchema = new Schema({
         type: String,
         trim: true,
         lowercase: true
+
+    },
+    fixProductImage : {
+        type: String,
+        trim: true
 
     }
     
