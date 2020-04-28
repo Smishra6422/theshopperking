@@ -1,26 +1,22 @@
-<div id=outside class="crousell">
-  <div id="crousellController" class=center>
-    <span id=prev><i class="fa fa-arrow-left"></i></span>
-    <span id=next><i class="fa fa-arrow-right"></i></span>
-  </div>     
-          
-  <div id="crousellInner" class="cycle-slideshow" 
-      data-cycle-fx="scrollHorz" 
-      data-cycle-timeout="2000"
-      data-cycle-prev="#prev"
-      data-cycle-next="#next"
-      data-cycle-slides="> a"
-      >   
-      
-      <% offerImage.forEach(images => { %>
-        <a href="/offerTermCondition" id="offerTermCondition">
-          <img src="/assets/<%= images.image %>"  alt="Offer Images">
-        </a>
-      <% }) %>
-      
-  </div>       
-          
+<div style="overflow: hidden;" id="outside" class="crousell">
+  <div id="crousellController" class="center">
+    <span id="prev"><i class="fa fa-arrow-left"></i></span>
+    <span id="next"><i class="fa fa-arrow-right"></i></span>
+  </div>
+
+  <div
+    id="crousellInner"
+    class="cycle-slideshow"
+    data-cycle-fx="scrollHorz"
+    data-cycle-timeout="2000"
+    data-cycle-prev="#prev"
+    data-cycle-next="#next"
+    data-cycle-slides="> a"
+  >
+    <% offerImage.forEach(images => { %>
+    <a href="/offerTermCondition" id="offerTermCondition">
+      <img src="/assets/<%= images.image %>" alt="Offer Images" />
+    </a>
+    <% }) %>
+  </div>
 </div>
-
-
-
