@@ -1,54 +1,48 @@
+<% if(products.length > 0) { %>
+
 <div id="main">
-    <div class="grid">
-         
+  <div class="grid">
+    <% products.forEach(product => { %>
+    <div class="gridItems">
+      <div class="itemImage">
+        <div class="itemImageSlide cycle-slideshow">
+          <img
+            class="<%= product.fixProductImage %>"
+            src="<%= product.imageUrl %>"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="itemName">
+        <h5 class="name"><%= product.originalName %></h5>
+      </div>
+      <div class="itemDescription">
+        <p class="description"><%= product.description %></p>
+      </div>
+      <div class="itemPrice">
+        <h6 class="currentPrice">Rs. <%= product.currentPrice %></h6>
+        <h6 class="originalPrice">Rs. <%= product.originalPrice %></h6>
+        <h6 class="discountPercent"><%= product.offPercent %></h6>
+      </div>
+      <div class="itemBuy">
+        <a href="/editProduct/?productId=<%= product._id %>">
+          Edit
+        </a>
 
-        <% products.forEach(product => { %>
-            <div class="gridItems">
-                <div class="itemImage">
-                    <div class="itemImageSlide cycle-slideshow"
-                            data-cycle-fx="scrollHorz"
-                            data-cycle-pause-on-hover="true"
-                            data-cycle-timeout="1000"
-                            >
-                                <img class="<%= product.fixProductImage %>" src="<%= product.imageUrl %>" alt="">
-                                <% if(product.imageUrl2) { %>
-                                    <img class="<%= product.fixProductImage %>" src="<%= product.imageUrl2 %>" alt="">
-                                <% } %>
-                                <% if(product.imageUrl3) { %>
-                                    <img class="<%= product.fixProductImage %>" src="<%= product.imageUrl3 %>" alt="">
-                                <% } %>
-                        </div>
-                </div>
-                <div class="itemName">
-                    <h5 class="name"><%= product.originalName %></h5>
-                </div>
-                <div class="itemDescription">
-                    <p class="description"><%= product.description %></p>
-                </div>
-                <div class="itemPrice">
-                    <h6 class="currentPrice">Rs. <%= product.currentPrice %></h6>
-                    <h6 class="originalPrice">Rs. <%= product.originalPrice %></h6>
-                    <h6 class="discountPercent"><%= product.offPercent %></h6>
-                </div>
-                <div class="itemBuy">
-                    <a href="/editProduct/?productId=<%= product._id %>">
-                        Edit
-                    </a>
-        
-                    <form id="deleteButton" action="/deleteProduct" method="POST">
-                        <input type="hidden" name="productId" value="<%= product._id %>">
-                        <input id="deleteAction" type="submit" value="Delete">
-                    </form>
-
-                </div>
-            </div>
-       <% }) %>
-            
-           
-
-        
-            
-       
-        
+        <form id="deleteButton" action="/deleteProduct" method="POST">
+          <input type="hidden" name="productId" value="<%= product._id %>" />
+          <input id="deleteAction" type="submit" value="Delete" />
+        </form>
+      </div>
     </div>
+    <% }) %>
+  </div>
 </div>
+
+<% } else if(totalItems <= 0 && title != "Search Result") { %>
+
+<div class="no-product-image">
+  <img src="/assets/noProduct.svg" alt="No product found" />
+</div>
+
+<%} %>

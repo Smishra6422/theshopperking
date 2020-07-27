@@ -1,219 +1,209 @@
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    grid-auto-rows: 22rem;
-    margin: 1rem 3px;
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 22rem;
+  margin: 1rem 3px;
+  grid-gap: 1rem;
 }
 
 .gridItems {
-    position: relative;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 .itemImage {
-    position: relative;
-    width: 100%;
-    height: 60%;
-    display: -webkit-box;
-  	display: -moz-box;
-  	display: -webkit-flex;
-  	display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .itemImage > img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .itemImageSlide {
-    position: relative;
-    height: 100%;
-    width: 100%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .itemImageSlide img {
-    width: 100% !important;
-    height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
-.itemName, .itemDescription, .itemPrice, .itemBuy {
-    position: absolute;
-    width: 100%;
-    
+.itemName,
+.itemDescription,
+.itemPrice,
+.itemBuy {
+  position: absolute;
+  width: 100%;
 }
 
-.name, .description {
-    padding: 0 2%;
+.name,
+.description {
+  padding: 0 2%;
 }
 
 .itemName {
-    top: 61%;
+  top: 61%;
 }
 
-
 .itemDescription {
-    top: 67%;
+  top: 67%;
 }
 
 .description {
-    height: 1.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .itemPrice {
-    top: 75%;
+  top: 75%;
 }
 
-.currentPrice, .originalPrice, .discountPercent {
-    display: inline-block;
-    font-weight: 600;
+.currentPrice,
+.originalPrice,
+.discountPercent {
+  display: inline-block;
+  font-weight: 600;
 }
 
-.itemPrice  .currentPrice, .itemPrice .originalPrice{
-    margin-right: 0.6%;
+.itemPrice .currentPrice,
+.itemPrice .originalPrice {
+  margin-right: 0.6%;
 }
 
-.itemPrice .originalPrice{
-    font-size: 0.8rem;
-    text-decoration: line-through;
-    color: #f36652;
+.itemPrice .originalPrice {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  color: #f36652;
 }
 
-.discountPercent{
-    font-size: 0.8rem;
-    color: #4caf50;
-    padding: 0 2% 0 0;
-} 
+.discountPercent {
+  font-size: 0.8rem;
+  color: #4caf50;
+  padding: 0 2% 0 0;
+}
 
 .itemPrice .currentPrice {
-    padding: 0 0 0 2%;
+  padding: 0 0 0 2%;
 }
 
 .itemBuy {
-   top: 85%;
-   height: 11%;
+  top: 85%;
+  height: 11%;
 }
 
-
-
- .itemBuy a {
-    background: #0facf3;
-    text-decoration: none;
-    position: relative;
-    width: 94%;
-    margin: 0 3%;
-    display: inline-block;
-    height: 100%;
-    text-align: center;
-    font-size: 1.3rem;
-    letter-spacing: 0.1rem;
-    border-radius: 4px;
-    color: #fff;
-    padding: 1.8% 0;
- }
-
- .itemBuy a:hover {
-     font-size: 1.4rem;
-     letter-spacing: 0.17rem;
- }
-
-
-@media (min-width:73rem) {
-    .grid {
-        grid-auto-rows: 25rem;
-    }
+.itemBuy a {
+  background: #0facf3;
+  text-decoration: none;
+  position: relative;
+  width: 94%;
+  margin: 0 3%;
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1.8% 0;
 }
 
- @media  (max-width:73rem) {
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    
+.itemBuy a:hover {
+  font-size: 1.4rem;
+  letter-spacing: 0.17rem;
 }
 
-
- @media  (max-width:57rem) {
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+@media (min-width: 73rem) {
+  .grid {
+    grid-auto-rows: 25rem;
+  }
 }
 
- @media (max-width:640px)  {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .gridItems > .itemDescription {
-        top: 69%;
-    }
-
-    .gridItems > .itemPrice {
-        top: 75.3%;
-    }
-
-    .itemName .name{
-        font-size: 1rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    
+@media (max-width: 73rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
-@media (max-width:27rem) {
-    .gridItems  .itemPrice .currentPrice {
-        font-size: 0.68rem;
-    }
-
-    .gridItems > .itemPrice .originalPrice, .discountPercent {
-        font-size: 0.62rem;
-    }
+@media (max-width: 57rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-@media (max-width:21rem)  {
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .grid {
-        grid-auto-rows: 18rem;
- 
-    
-    }
-    
+  .gridItems > .itemDescription {
+    top: 69%;
+  }
 
-    .itemPrice .currentPrice {
-        
-        margin-right: 0;
-    } 
+  .gridItems > .itemPrice {
+    top: 75.3%;
+  }
 
-    .itemPrice .originalPrice {
-        
-        padding-right: 0;
-        margin-right: 0;
-    
-    }
+  .itemName .name {
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
 
-    .itemPrice .discountPercent {
-        margin: 0;
-        padding: 0;
-        padding-right: 1.2%;
-    }  
-    
-    .itemBuy a {
-        padding: 0.4% 0;
-    }
-    
+@media (max-width: 27rem) {
+  .gridItems .itemPrice .currentPrice {
+    font-size: 0.68rem;
+  }
+
+  .gridItems > .itemPrice .originalPrice,
+  .discountPercent {
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 21rem) {
+  .grid {
+    grid-auto-rows: 18rem;
+  }
+
+  .itemPrice .currentPrice {
+    margin-right: 0;
+  }
+
+  .itemPrice .originalPrice {
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .itemPrice .discountPercent {
+    margin: 0;
+    padding: 0;
+    padding-right: 1.2%;
+  }
+
+  .itemBuy a {
+    padding: 0.4% 0;
+  }
 }

@@ -1,79 +1,76 @@
 body {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 44px 0.6rem 26vh auto auto 10.5rem;
-    grid-template-rows: 44px 0.6rem 26vh auto auto 10.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 44px 0.6rem 26vh auto auto 10.5rem;
+  grid-template-rows: 44px 0.6rem 26vh auto auto 10.5rem;
 }
 
 nav {
-    -ms-grid-row : 1;
-    grid-row: 1/2;
+  -ms-grid-row: 1;
+  grid-row: 1/2;
 }
 
 .crousell {
-    -ms-grid-row : 3;
-    grid-row: 3/4;
+  -ms-grid-row: 3;
+  grid-row: 3/4;
+}
+
+#no-product-image {
+  -ms-grid-row: 4;
+  grid-row: 4/5;
+}
+
+.offerImages {
+  -ms-grid-row: 4;
+  grid-row: 4/5;
 }
 
 #main {
-    -ms-grid-row : 4;
-    grid-row: 4/5;
+  -ms-grid-row: 4;
+  grid-row: 4/5;
 }
 
 #pagination {
-    -ms-grid-row : 5;
-    grid-row: 5/6;
+  -ms-grid-row: 5;
+  grid-row: 5/6;
 }
 
 .footer {
-    -ms-grid-row : 6;
-    grid-row: 6/7;
+  -ms-grid-row: 6;
+  grid-row: 6/7;
 }
 
-@media (max-width:70rem) {
-
-    body{
-        -ms-grid-rows: 44px 3px 23vh auto auto  10.5rem;
-        grid-template-rows: 44px 3px 23vh auto auto  10.5rem;
-    }
-
-    
+@media (max-width: 70rem) {
+  body {
+    -ms-grid-rows: 44px 3px 23vh auto auto 10.5rem;
+    grid-template-rows: 44px 3px 23vh auto auto 10.5rem;
+  }
 }
 
-@media (max-width:60rem) {
-    body {
-        -ms-grid-rows: 44px 3px 23vh auto auto  23rem;
-        grid-template-rows: 44px 3px 23vh auto auto  23rem;
-    }
+@media (max-width: 60rem) {
+  body {
+    -ms-grid-rows: 44px 3px 23vh auto auto 23rem;
+    grid-template-rows: 44px 3px 23vh auto auto 23rem;
+  }
 }
 
-@media (max-width:50rem) {
-
-    body {
-        -ms-grid-rows: 44px 3px 16vh auto auto 10.5rem;
-        grid-template-rows: 44px 3px 16vh auto auto 10.5rem;
-    }
-    
+@media (max-width: 50rem) {
+  body {
+    -ms-grid-rows: 44px 3px 16vh auto auto 10.5rem;
+    grid-template-rows: 44px 3px 16vh auto auto 10.5rem;
+  }
 }
 
-@media (max-width:30rem) {
-  
-
-    body {
-        -ms-grid-rows: 44px 3px 15vh auto auto 10.5rem;
-        grid-template-rows: 44px 3px 15vh auto auto 10.5rem;
-    }
-
-    
+@media (max-width: 30rem) {
+  body {
+    -ms-grid-rows: 44px 3px 15vh auto auto 10.5rem;
+    grid-template-rows: 44px 3px 15vh auto auto 10.5rem;
+  }
 }
 
-@media (max-width:23rem) {
-   
-
-    body {
-        -ms-grid-rows: 44px 3px 13vh auto auto 10.5rem;
-        grid-template-rows: 44px 3px 13vh auto auto 10.5rem;
-    }
-
-    
+@media (max-width: 23rem) {
+  body {
+    -ms-grid-rows: 44px 3px 13vh auto auto 10.5rem;
+    grid-template-rows: 44px 3px 13vh auto auto 10.5rem;
+  }
 }
