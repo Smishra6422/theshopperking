@@ -497,12 +497,17 @@ exports.postAddKeyword = async (req, res, next) => {
 exports.adminLogin = async (req, res, next) => {
   const suggestionLists = await Keyword.find();
   const totalItemCount = [];
-  res.render("adminLogin", {
-    suggestionLists,
-    isAdmin: req.session.isAdmin,
-    totalItemCount,
-    title: "Admin Login",
-  });
+
+  if (req.session.isAdmin) {
+    res.redirect("/");
+  } else {
+    res.render("adminLogin", {
+      suggestionLists,
+      isAdmin: req.session.isAdmin,
+      totalItemCount,
+      title: "Admin Login",
+    });
+  }
 };
 
 // exports.postAdminLogin = (req, res, next) => {

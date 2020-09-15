@@ -25,9 +25,7 @@
         <h6 class="discountPercent"><%= product.offPercent %></h6>
       </div>
       <div class="itemBuy">
-        <a href="/editProduct/?productId=<%= product._id %>">
-          Edit
-        </a>
+        <a href="/editProduct/?productId=<%= product._id %>"> Edit </a>
 
         <form id="deleteButton" action="/deleteProduct" method="POST">
           <input type="hidden" name="productId" value="<%= product._id %>" />

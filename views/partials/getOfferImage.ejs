@@ -1,24 +1,19 @@
 <section class="offerImages">
+  <% images.forEach(image => { %>
+  <div class="offerImagesItem">
+    <div class="offerImagesImage">
+      <img src="<%= '/assets/'+image.image %>" alt="" />
+    </div>
 
-    <% images.forEach(image => { %>
-            <div class="offerImagesItem">
-                <div class="offerImagesImage">
-                    <img src="<%= '/assets/'+image.image %>" alt="">
-                </div>
-                
-                <div class="editImage">
-                    <a href="/editOfferImage/?productId=<%= image._id  %>">
-                        Edit
-                    </a>
-        
-                    <form id="deleteImage" action="/deleteOfferImage" method="POST">
-                        <input type="hidden" name="productId" value="<%= image._id %>">
-                        <input id="deleteAction" type="submit" value="Delete">
-                    </form>
+    <div class="editImage">
+      <a href="/editOfferImage/?productId=<%= image._id  %>"> Edit </a>
 
-                </div>
-                
-            </div>
+      <form id="deleteImage" action="/deleteOfferImage" method="POST">
+        <input type="hidden" name="productId" value="<%= image._id %>" />
+        <input id="deleteAction" type="submit" value="Delete" />
+      </form>
+    </div>
+  </div>
 
-        <% }) %>
+  <% }) %>
 </section>

@@ -1,37 +1,67 @@
 <div class="right-menu">
-    <ul>
-        <% if(isAdmin == 'theShopperKing') { %>
-            <li id="admin"><a href="#" class="right-menu-items">Admin</a>
+  <ul>
+    <% if(isAdmin ) { %>
+    <li id="admin">
+      <a href="#" class="right-menu-items">Admin</a>
 
-                <div class="admin-sub-item">
-                   <ul>
-                       <li><a href="/adminCategories/?categories=men" class="admin-sub-item-list">Men</a></li>
-                       <li><a href="/adminCategories/?categories=women" class="admin-sub-item-list">Women</a></li>
-                       <li><a href="/adminCategories/?categories=kids" class="admin-sub-item-list">Kids</a></li>
-                       <li><a href="/adminCategories/?categories=electronics" class="admin-sub-item-list">Electronics</a></li>
-                       <li><a href="/addProduct" class="admin-sub-item-list">Add Product</a></li>
-                       <li><a href="/addCategories" class="admin-sub-item-list">Add Categories</a></li>
-                       <li><a href="/addKeyword" class="admin-sub-item-list">Add Keyword</a></li>
-                       <li><a href="/addOfferImages" class="admin-sub-item-list">Add Offer Image</a></li>
-                       <li><a href="/getOfferImages" class="admin-sub-item-list">Offer Images</a></li>
-                       
-                   </ul>
-                </div>
-   
-              </li>
-       <% } %>
-       
-       <li id="loginMenu"><a href="" class="right-menu-items" id="login"><i class="fa fa-user"></i></a>
-        
-        <div class="login-sub-item">
-            <ul>
-                <li><a href="/adminLogin" class="login-sub-item-list">Login</a></li>
-                <li><a href="/adminLogout" class="login-sub-item-list">Logout</a></li>
-               
-                
-            </ul>
-         </div>
-    
-       </li>
-    </ul>
+      <div class="admin-sub-item">
+        <ul>
+          <li>
+            <a
+              href="/adminCategories/?categories=men"
+              class="admin-sub-item-list"
+              >Men</a
+            >
+          </li>
+          <li>
+            <a
+              href="/adminCategories/?categories=women"
+              class="admin-sub-item-list"
+              >Women</a
+            >
+          </li>
+          <li>
+            <a
+              href="/adminCategories/?categories=kids"
+              class="admin-sub-item-list"
+              >Kids</a
+            >
+          </li>
+          <li>
+            <a
+              href="/adminCategories/?categories=electronics"
+              class="admin-sub-item-list"
+              >Electronics</a
+            >
+          </li>
+          <li>
+            <a href="/addProduct" class="admin-sub-item-list">Add Product</a>
+          </li>
+          <li>
+            <a href="/addCategories" class="admin-sub-item-list"
+              >Add Categories</a
+            >
+          </li>
+          <li>
+            <a href="/addKeyword" class="admin-sub-item-list">Add Keyword</a>
+          </li>
+          <li>
+            <a href="/addOfferImages" class="admin-sub-item-list"
+              >Add Offer Image</a
+            >
+          </li>
+          <li>
+            <a href="/getOfferImages" class="admin-sub-item-list"
+              >Offer Images</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <% } %> <% if(!isAdmin ) { %>
+    <li><a href="/adminLogin" class="login">Login</a></li>
+    <% } else { %>
+    <li><a href="/adminLogout" class="logout">Logout</a></li>
+    <% } %>
+  </ul>
 </div>

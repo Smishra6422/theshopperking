@@ -1,17 +1,19 @@
 <div id="form">
-    <form action="/editOfferImage" method="POST" enctype="multipart/form-data">
+  <form action="/editOfferImage" method="POST" enctype="multipart/form-data">
+    <div>
+      <label>Image :</label>
+      <input
+        type="file"
+        name="images"
+        placeholder="Enter Images For Offer Page"
+        required
+      />
+    </div>
 
-      <div>
-        <label>Image :</label>   
-        <input type="file" name="images"  placeholder="Enter Images For Offer Page"  required>
-      </div>
+    <input type="hidden" name="productId" value="<%= productId %>" />
 
-      <input type="hidden" name="productId" value="<%= productId %>">
-
-      <div class="submitButton">
-                <input id="submit" type="submit" value="Add Images">
-      </div>
-
-    </form>
-
+    <div class="submitButton">
+      <input id="submit" type="submit" value="Add Images" />
+    </div>
+  </form>
 </div>

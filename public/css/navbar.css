@@ -1,7 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: 'Roboto', sans-serif;
   background: #f8f9fa;
 }
 
@@ -322,8 +323,7 @@ nav {
   overflow: hidden;
 }
 
-#admin .admin-sub-item,
-.login-sub-item {
+#admin .admin-sub-item {
   position: fixed;
   top: 44px;
   left: 80%;
@@ -343,29 +343,22 @@ nav {
   background: #fff;
 }
 
-.login-sub-item {
-  left: 90%;
-  width: 10%;
-  height: 8rem;
-}
 
-#admin .admin-sub-item ul,
-.login-sub-item ul {
+
+#admin .admin-sub-item ul {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-#admin .admin-sub-item ul li,
-.login-sub-item ul li {
+#admin .admin-sub-item ul li {
   list-style: none;
   height: 2.8rem;
   margin-top: 0.1rem;
   padding: 0;
 }
 
-#admin .admin-sub-item ul li a,
-.login-sub-item ul li a {
+#admin .admin-sub-item ul li a{
   text-decoration: none;
   display: inline-block;
   width: 100%;
@@ -374,20 +367,24 @@ nav {
   padding-left: 10px;
 }
 
-#admin .admin-sub-item ul li a:hover,
-.login-sub-item ul li a:hover {
+#admin .admin-sub-item ul li a:hover {
   background: #ff3366;
   color: #fff;
 }
 
-.admin-sub-item,
-.login-sub-item {
+.admin-sub-item{
   display: none;
 }
 
-#admin:hover .admin-sub-item,
-#loginMenu:hover .login-sub-item {
+#admin:hover .admin-sub-item {
   display: block;
+}
+
+.right-menu > ul .login,
+.right-menu > ul .logout  {
+  padding: 8px 12px;
+  border: 1px solid #0facf3;
+  border-radius: 5px;
 }
 
 #toggle {
